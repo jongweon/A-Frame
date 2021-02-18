@@ -1,0 +1,5 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+# https://stackabuse.com/git-ignore-files-with-gitignore/
+
+# System Files
+.DS_Store

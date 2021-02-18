@@ -1,0 +1,27 @@
+<!-- index1.js
+    Box Component: 3D equivalent of writing 'Hello World'
+    Study how we can add 3D objects and affect the scene graph by writing a component that uses three.js.
+     index2.js
+    follow component:
+    https://aframe.io/docs/1.1.0/introduction/writing-a-component.html
+-->
+
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+        <!-- <script src="index1.js"></script> -->
+        <script src="index2.js"></script>
+    </head>
+    <body>
+<!--         <a-scene>
+            <a-entity box="width: 0.5; height: 0.25; depth: 1; color: cyan"
+            position="0 0 -5"></a-entity>
+        </a-scene>
+ -->
+        <a-scene>
+            <a-box id="target-box" color="#5E82C5" position="-3 0 -5"></a-box>
+            <a-box follow="target: #target-box; speed: 1" color="#FF6B6B" position="3 0 -5"></a-box>
+        </a-scene>
+
+    </body>
+</html>

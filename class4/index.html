@@ -1,0 +1,18 @@
+<!-- Writing a component. 
+    https://aframe.io/docs/1.1.0/introduction/writing-a-component.html
+-->
+
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+        <script src="index2.js"></script>
+    </head>
+    <body>
+        <a-scene>
+            <!-- 'log' entity는 먼저 선언된 entity가 적용됨 -->
+            <!-- <a-entity log="message: Save the world!"></a-entity> -->
+            <a-entity log="event: anEvent; message: Save the world!"></a-entity>
+            <!-- <a-entity hello-world></a-entity> -->
+        </a-scene>
+    </body>
+</html>

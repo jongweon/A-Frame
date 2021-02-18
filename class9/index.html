@@ -1,0 +1,42 @@
+<!-- 
+    Building a basic A-Frame scene
+    https://aframe.io/docs/1.1.0/guides/building-a-basic-scene.html
+    1) Start out with the minimal HTML structure
+-->
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <!-- <a-scene> will contain every entity in our scene. 
+        <a-scene> handles all of the setup that is required for 3D: 
+            setting up WebGL, the canvas, camera, lights, renderer, render loop 
+            as well as out of the box WebVR support on platforms such as HTC Vive, 
+            Oculus Rift, Samsung GearVR, and smartphones (Google Cardboard). -->
+    <a-scene>
+        <!-- other primitives: <a-cylinder>, <a-plane>, <a-sphere> -->
+        <!-- <a-box color="red" rotation="0 45 45" scale = "2 2 2"></a-box> -->
+        <!-- The above code equals with the following code using 3 components (id, geometry, material)
+            <a-entity id="box" geometry="primitive: box" material="color: red"></a-entity> -->
+        <!-- The default camera and the box are positioned at the default position at the 0 0 0 origin. 
+            We won’t be able to see the box unless we move it.-->
+        <!-- Transforming: Right-hand coordinate, Position in meters, Angles in degrees -->
+
+<!--         <a-box color="red" position="0 2 0" rotation="0 45 45" scale="1 1 1">
+            <a-sphere position="1 0 3"></a-sphere>
+          </a-box>
+ -->        
+        <!-- The above codes demonstrate parent and child relations.
+            The child inherits transformation (i.e. position, rotation, scale) from the parent.
+            The box and the sphere do not viewable with the default camera position. 
+            Use WebXR and move the headset to find objects. -->
+            <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+                <a-sphere position="1 0 0"></a-sphere>
+              </a-box>
+            
+        <!-- For flat displays (i.e., laptop, desktop),
+            look around by click-dragging the mouse and move around with the WASD or arrow keys.-->
+    </a-scene>
+  </body>
+</html>
